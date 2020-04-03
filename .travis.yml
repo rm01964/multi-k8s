@@ -3,21 +3,21 @@ services:
 - docker
 
 before_install:
-  - docker build -t rpenunuri/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t rm01964/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true rpenunuri/react-test npm test
+  - docker run -e CI=true rm01964/react-test npm test
 
 after_success:
-  - docker build -t rpenunuri/multi-client ./client
-  - docker build -t rpenunuri/multi-nginx ./nginx
-  - docker build -t rpenunuri/multi-server ./server
-  - docker build -t rpenunuri/multi-worker ./worker
+  - docker build -t rm01964/multi-client ./client
+  - docker build -t rm01964/multi-nginx ./nginx
+  - docker build -t rm01964/multi-server ./server
+  - docker build -t rm01964/multi-worker ./worker
 
   # Log in to the docker CLI
-  - echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+  - echo "$DOCKER_PASS" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
-  - docker push rpenunuri/multi-client
-  - docker push rpenunuri/multi-nginx
-  - docker push rpenunuri/multi-server
-  - docker push rpenunuri/multi-worker
+  - docker push rm01964/multi-client
+  - docker push rm01964/multi-nginx
+  - docker push rm01964/multi-server
+  - docker push rm01964/multi-worker
