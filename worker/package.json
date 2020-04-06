@@ -2,7 +2,20 @@
   "dependencies": {
     "nodemon": "1.18.3",
     "redis": "2.8.0",
-    "acorn": "7.1.1"
+    "acorn": "7.1.1",
+    "minimist": "1.2.5",
+    "kind-of": "6.0.3",
+    "set-value": "3.0.2",
+    "mixin-deep": "2.0.1",
+    "handlebars": "4.7.6",
+    "lodash.template": "4.5.0",
+    "mem": "6.0.1",
+    "eslint": "6.8.0",
+    "js-yaml": "3.13.1",
+    "lodash": "4.17.15",
+    "react-dev-utils": "10.2.1",
+    "webpack-dev-server": "3.10.3",
+    "merge": "1.2.1"
   },
   "scripts": {
     "start": "node index.js",
