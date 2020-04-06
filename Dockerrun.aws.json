@@ -3,25 +3,25 @@
     "containerDefinitions": [
         {
             "name": "client",
-            "image": "rpenunuri/multi-client",
+            "image": "rm01964/multi-client",
             "hostname": "client",
             "essential": false
         },
         {
             "name": "server",
-            "image": "rpenunuri/multi-server",
+            "image": "rm01964/multi-server",
             "hostname": "api",
             "essential": false
         },
         {
             "name": "worker",
-            "image": "rpenunuri/multi-worker",
+            "image": "rm01964/multi-worker",
             "hostname": "worker",
             "essential": false
         },
         {
             "name": "nginx",
-            "image": "rpenunuri/multi-nginx",
+            "image": "rm01964/multi-nginx",
             "hostname": "nginx",
             "essential": true,
             "portMappings": [
